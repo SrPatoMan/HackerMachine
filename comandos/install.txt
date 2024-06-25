@@ -3,7 +3,7 @@
 sudo apt update && sudo apt upgrade -y
 
 ### Paquetes ###
-sudo apt install neofetch zsh git curl wget flatpak net-tools kitty
+sudo apt install neofetch zsh git curl wget flatpak net-tools kitty bat lsd
 ## solo si uso gnome ## sudo apt install gnome-tweaks -y 
 
 
