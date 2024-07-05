@@ -3,7 +3,7 @@
 sudo apt update && sudo apt upgrade -y
 
 ### Paquetes ###
-sudo apt install neofetch zsh git curl wget flatpak net-tools kitty bat lsd
+sudo apt install neofetch zsh git curl wget flatpak net-tools kitty bat lsd -y
 ## solo si uso gnome ## sudo apt install gnome-tweaks -y 
 
 
@@ -12,4 +12,9 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 flatpak install flathub com.spotify.Client
 
 
-# 3 #
+
+## 3 ## Herramientas pentesting (sino es kali o parrot) ##
+sudo apt install nmap wireshark netcat
+
+
+** ## INSTALAR BURPSUITE ## **
