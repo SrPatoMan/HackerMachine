@@ -14,7 +14,7 @@ flatpak install flathub com.spotify.Client
 
 
 ## 3 ## Herramientas pentesting (sino es kali o parrot) ##
-sudo apt install nmap wireshark netcat
+sudo apt install nmap wireshark netcat -y
 
 
 ** ## INSTALAR BURPSUITE ## **
