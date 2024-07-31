@@ -27,7 +27,7 @@ sudo apt install nmap wireshark netcat -y
 sudo apt update
 sudo snap refresh
 sudo apt install zip curl wget git
-sudo apt install golang --classic
+sudo apt install golang
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
 sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 sudo apt update 
