@@ -36,3 +36,4 @@ sudo apt install google-chrome-stable
 
 ## INSTALACION :
 
+go install github.com/projectdiscovery/katana/cmd/katana@latest
