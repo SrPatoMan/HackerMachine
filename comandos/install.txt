@@ -4,7 +4,9 @@ sudo apt update && sudo apt upgrade -y
 
 ### Paquetes ###
 sudo apt install neofetch zsh git curl wget flatpak net-tools kitty bat lsd -y
-## solo si uso gnome ## sudo apt install gnome-tweaks -y 
+## solo si uso gnome: ##
+sudo apt install gnome-tweaks -y 
+sudo snap install feroxbuster
 
 
 ### flatpak ###
