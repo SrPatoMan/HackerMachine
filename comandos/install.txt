@@ -34,6 +34,11 @@ sudo apt update
 sudo apt install google-chrome-stable
 
 
+### FEROXBUSTER ###
+
+curl -sL https://raw.githubusercontent.com/epi052/feroxbuster/main/install-nix.sh | bash
+
+
 ## INSTALACION :
 
 go install github.com/projectdiscovery/katana/cmd/katana@latest
