@@ -59,4 +59,8 @@ cd httprobe
 go build main.go
 mv main httprobe
 sudo mv httprobe /usr/bin 
+cd ..;sudo rm -r httprobe
+
+
+### WAYBACKURLS ###
 
