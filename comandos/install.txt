@@ -18,7 +18,9 @@ flatpak install flathub com.spotify.Client
 ~ QSTweak
 ~ Privacy Quick Settings
 ~ Logo Menu
-~ 
+~ Just Perfection
+~
+
 
 
 ## 3 ## Herramientas pentesting (sino es kali o parrot) ##
