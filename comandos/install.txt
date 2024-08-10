@@ -79,3 +79,6 @@ sudo rm -rf go/
 
 
 ### GAU ###
+
+go install github.com/lc/gau/v2/cmd/gau@latest
+sudo mv /go/bin/gau /usr/bin
