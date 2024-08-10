@@ -83,3 +83,10 @@ sudo rm -rf go/
 go install github.com/lc/gau/v2/cmd/gau@latest
 sudo mv /go/bin/gau /usr/bin
 sudo rm -rf go/
+
+
+### SUBFINDER ###
+
+go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+sudo mv go/bin/subfinder /usr/bin
+sudo rm -rf go/
