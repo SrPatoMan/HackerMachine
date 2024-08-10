@@ -70,5 +70,12 @@ sudo mv httprobe /usr/bin
 cd ..;sudo rm -r httprobe
 
 
+
 ### WAYBACKURLS ###
 
+go install github.com/tomnomnom/waybackurls@latest
+sudo mv go/bin/waybackurls /usr/bin
+sudo rm -rf go/
+
+
+### GAU ###
