@@ -3,7 +3,7 @@
 sudo apt update && sudo apt upgrade -y
 
 ### Paquetes ###
-sudo apt install neofetch zsh git curl wget flatpak net-tools kitty bat lsd -y
+sudo apt install neofetch zsh git curl wget flatpak net-tools kitty bat lsd golang -y
 ## solo si uso gnome: ##
 sudo apt install gnome-tweaks -y 
 
@@ -62,7 +62,6 @@ sudo mv aquatone /usr/bin/
 ### HTTPPROBE ###
 
 git clone https://github.com/tomnomnom/httprobe
-sudo apt install golang
 cd httprobe
 go build main.go
 mv main httprobe
