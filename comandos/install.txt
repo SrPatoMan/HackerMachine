@@ -89,3 +89,10 @@ sudo rm -rf go/
 go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 sudo mv go/bin/subfinder /usr/bin
 sudo rm -rf go/
+
+
+### HTTPX ###
+
+go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
+sudo mv go/bin/httpx /usr/bin
+sudo rm -rf go/
