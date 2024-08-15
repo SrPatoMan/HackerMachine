@@ -96,3 +96,10 @@ sudo rm -rf go/
 go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 sudo mv go/bin/httpx /usr/bin
 sudo rm -rf go/
+
+
+### NUCLEI ###
+
+go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
+sudo mv go/bin/nuclei /usr/bin
+sudo rm -rf go/
