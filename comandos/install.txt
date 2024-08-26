@@ -103,3 +103,14 @@ sudo rm -rf go/
 go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
 sudo mv go/bin/nuclei /usr/bin
 sudo rm -rf go/
+
+
+############## ANDROID HACKING #############
+### DEX2JAR ###
+
+wget "https://github.com/pxb1988/dex2jar/releases/download/v2.4/dex-tools-v2.4.zip"
+unzip dex-tools-v2.4.zip
+sudo mv dex-tools-v2.4/ /usr/bin
+rm dex-tools-v2.4.zip
+cd /usr/bin/dex-tools-v2.4/bin
+sudo mv dex-tools dex2jar
