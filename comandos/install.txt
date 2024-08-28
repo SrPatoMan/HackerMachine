@@ -112,6 +112,12 @@ cd crlf-detection-script
 pip install -r requirements.txt
 
 
+### URO ###
+
+pip3 install uro
+
+
+
 ############## ANDROID HACKING #############
 ### DEX2JAR ###
 
