@@ -105,6 +105,13 @@ sudo mv go/bin/nuclei /usr/bin
 sudo rm -rf go/
 
 
+### CRLF INJECTION DETECTION ###
+
+git clone https://github.com/moopinger/crlf-detection-script.git
+cd crlf-detection-script
+pip install -r requirements.txt
+
+
 ############## ANDROID HACKING #############
 ### DEX2JAR ###
 
