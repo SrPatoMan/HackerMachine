@@ -1,4 +1,7 @@
 ### MI ENTORNO DE ESCRITORIO PERSOLANLIZADO ###
 
-Instalar el archivo install.sh
-Ej: bash install.sh | ./install.sh (cualquiera de las dos formas es valida)
+INSTALACIÓN:
+
+wget "https://raw.githubusercontent.com/SrPatoMan/MaquinaCustom/main/install.sh"
+sudo chmod +x install.sh
+./install.sh
