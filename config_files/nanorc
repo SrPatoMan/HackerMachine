@@ -1,0 +1,12 @@
+# Archivo de configuración de Nano (.nanorc)
+
+# Habilita el resaltado de sintaxis para varios lenguajes
+include /usr/share/nano/*.nanorc
+
+## Configuraciones
+set linenumbers
+set softwrap
+set mouse
+set tabsize 3
+set tabstospaces
+set casesensitive off
