@@ -43,11 +43,12 @@ sleep 3
 
 echo -e "\n\n[+] DIRSEARCH\n\n"
 git clone "https://github.com/maurosoria/dirsearch.git"
+cd dirsearch/ || { echo "Error al cambiar al directorio dirsearch"; sleep 3; } 
 pipx install dirsearch
 pipx ensurepath
 source ~/.local/share/pipx/venvs/dirsearch/bin/activate
 pipx runpip dirsearch install setuptools
-rm -rf dirsearch/
+rm -rf $PWD/dirsearch/
 
 echo -e "[+] AQUATONE\n\n\n"
 sleep 1
