@@ -92,7 +92,7 @@ sudo rm -rf go/
 
 echo -e "\n\n[+] NUCLEI\n\n\n"
 sleep 1
-sudo go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
+go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
 sudo mv go/bin/nuclei /usr/bin
 sudo rm -rf go/
 
