@@ -8,7 +8,7 @@ sudo apt update && sudo apt upgrade -y
 
 echo -e "\n\n\n[+] INSTALANDO PAQUETES BASICOS...\n\n\n"
 sleep 3
-sudo apt install neofetch zsh git curl wget flatpak net-tools kitty bat lsd golang nmap wireshark netcat-traditional openjdk-17-jre zip python3 python3-pip pipx -y
+sudo apt install neofetch zsh git curl wget flatpak net-tools kitty bat lsd golang nmap wireshark netcat-traditional openjdk-21-jre zip python3 python3-pip pipx -y
 
 echo -e "\n\n\n[+] ¿ESTAS USANDO GNOME? (y/n)(pulsa n sino lo sabes):\n" 
 read gnome_respuesta
