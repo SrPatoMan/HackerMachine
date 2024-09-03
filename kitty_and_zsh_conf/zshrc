@@ -106,9 +106,9 @@ source $ZSH/oh-my-zsh.sh
 
 # Alias propios:
 alias ls='lsd --group-dirs=first'
-#alias cat='bat'
+alias cat='batcat'
 alias f='firefox'
-
+unalias gau
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
