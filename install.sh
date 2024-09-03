@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo -e "\n####### By Manuel Ramos (a.k.a SrPatoMan) #######\n"
-echo -e "\n[+] INICIANDO INSTALACIÓN DEL ESTUDIO\n\n"
+echo -e "\n[+] INICIANDO INSTALACIÓN DEL ENTORNO\n\n"
 echo -e "[+] ACTUALIZANDO EL SISTEMA\n\n"
 sleep 4
 sudo apt update && sudo apt upgrade -y
