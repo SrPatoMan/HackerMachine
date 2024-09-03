@@ -152,7 +152,7 @@ read maquina_real
 maquina_real=$(echo "$maquina_real" | tr '[:upper:]' '[:lower:]')
 if [ $maquina_real == 'y' ];then
 echo -e "\n\n\nINSTALANDO VIRTUAL BOX...\n\n"
-sudo apt install virtualbox
+sudo apt install virtualbox -y
 wget "https://dl.genymotion.com/releases/genymotion-3.7.1/genymotion-3.7.1-linux_x64.bin"
 chmod +x genymotion-3.7.1-linux_x64.bin
 sudo ./genymotion-3.7.1-linux_x64.bin
