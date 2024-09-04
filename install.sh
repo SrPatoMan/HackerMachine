@@ -20,11 +20,6 @@ else
 :
 fi
 
-echo -e "\n\n\n[+] INSTALANDO SPOTIFY...\n\n"
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub com.spotify.Client
-
-
 echo -e "\n\n\n[+] INSTALANDO BURPSUITE...\n\n"
 
 wget "https://portswigger.net/burp/releases/download?product=community&version=2024.7.5&type=jar" -O burpsuite_community.jar
@@ -157,8 +152,10 @@ wget "https://dl.genymotion.com/releases/genymotion-3.7.1/genymotion-3.7.1-linux
 chmod +x genymotion-3.7.1-linux_x64.bin
 sudo ./genymotion-3.7.1-linux_x64.bin
 sudo apt install adb
+echo -e "\n\n\n[+] INSTALANDO SPOTIFY...\n\n"
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub com.spotify.Client
 else
 :
 fi
-
 
