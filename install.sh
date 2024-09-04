@@ -91,7 +91,7 @@ go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
 sudo mv go/bin/nuclei /usr/bin
 sudo rm -rf go/
 
-echo -e "\n\n[+] HAKCRAWLER\n\n\n"
+echo -e "\n\n[+] HAKRAWLER\n\n\n"
 sleep 1
 go install github.com/hakluke/hakrawler@latest
 sudo mv go/bin/hakrawler /usr/bin
@@ -159,3 +159,106 @@ else
 :
 fi
 
+
+### COMPROBAR INSTALACION DE LAS HERRAMIENTAS ###
+
+echo -e "\n\n\n[+] COMPROBANDO LA INSTALACION DE LAS HERRAMIENTAS...\n\n\n"
+sleep 5
+
+which burpsuite 1>/dev/null
+
+if [ $? != 0 ];then
+echo -e "\n[-] Burpsuite NO instalado\n"
+else
+echo -e "\n[+] BURPSUITE INSTALADO CON EXITO\n"
+fi
+
+which postman 1>/dev/null
+
+if [ $? != 0 ];then
+echo -e "\n[-] Postman NO instalado\n"
+else
+echo -e "\n[+] POSTMAN INSTALADO CON EXITO\n"
+fi
+
+which dirsearch 1>/dev/null
+
+if [ $? != 0 ];then
+echo -e "\n[-] Dirsearch NO instalado\n"
+else
+echo -e "\n[+] DIRSEARCH INSTALADO CON EXITO\n"
+fi
+
+which aquatone 1>/dev/null
+
+if [ $? != 0 ];then
+echo -e "\n[-] Aquatone NO instalado\n"
+else
+echo -e "\n[+] AQUATONE INSTALADO CON EXITO\n"
+fi
+
+which waybackurls 1>/dev/null
+
+if [ $? != 0 ];then
+echo -e "\n[-] Waybackurls NO instalado\n"
+else
+echo -e "\n[+] WAYBACKURLS INSTALADO CON EXITO\n"
+fi
+
+which gau 1>/dev/null
+
+if [ $? != 0 ];then
+echo -e "\n[-] Gau NO instalado\n"
+else
+echo -e "\n[+] GAU INSTALADO CON EXITO\n"
+fi
+
+which subfinder 1>/dev/null
+
+if [ $? != 0 ];then
+echo -e "\n[-] Subfinder NO instalado\n"
+else
+echo -e "\n[+] SUBFINDER INSTALADO CON EXITO\n"
+fi
+
+which httprobe 1>/dev/null
+
+if [ $? != 0 ];then
+echo -e "\n[-] Httprobe NO instalado\n"
+else
+echo -e "\n[+] HTTPROBE INSTALADO CON EXITO\n"
+fi
+
+which httpx 1>/dev/null
+
+if [ $? != 0 ];then
+echo -e "\n[-] Httpx NO instalado\n"
+else
+echo -e "\n[+] HTTPX INSTALADO CON EXITO\n"
+fi
+
+which nuclei 1>/dev/null
+
+if [ $? != 0 ];then
+echo -e "\n[-] Nuclei NO instalado\n"
+else
+echo -e "\n[+] NUCLEI INSTALADO CON EXITO\n"
+fi
+
+which hakrawler 1>/dev/null
+
+if [ $? != 0 ];then
+echo -e "\n[-] Hakrawler NO instalado\n"
+else
+echo -e "\n[+] HAKRAWLER INSTALADO CON EXITO\n"
+fi
+
+which d2j-dex2jar 1>/dev/null
+
+if [ $? != 0 ];then
+echo -e "\n[-] Dex2jar NO instalado\n"
+else
+echo -e "\n[+] DEX2JAR INSTALADO CON EXITO\n"
+fi
+
+echo -e "\n\n\n################### INSTALACION FINALIZADA ###################\n\n\n"
