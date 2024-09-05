@@ -1,0 +1,42 @@
+/* Borde de neón más intenso en la pestaña activa */
+.tabbrowser-tab[selected="true"] {
+    border: 3px solid rgba(0, 255, 255, 1); /* Color neón más brillante alrededor de la pestaña */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 1), 0 0 30px rgba(0, 255, 255, 0.7); /* Efecto de neón más fuerte */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro para mayor contraste */
+    transition: box-shadow 0.3s ease;
+}
+
+/* Color de fondo y borde de las pestañas inactivas */
+.tabbrowser-tab {
+    background-color: rgba(50, 50, 50, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Estilo del texto de la pestaña activa */
+.tabbrowser-tab[selected="true"] .tab-label {
+    color: white; /* Color del texto de la pestaña activa */
+}
+
+/* Estilo del texto de las pestañas inactivas */
+.tabbrowser-tab .tab-label {
+    color: rgba(255, 255, 255, 0.5); /* Texto más apagado para pestañas inactivas */
+}
+
+/* Efecto de neón en la barra de direcciones (barra de búsqueda superior) */
+#urlbar {
+    border: 1px solid rgba(0, 255, 255, 1); /* Borde neón */
+    box-shadow: 0 0 10px rgba(0, 255, 255, 1), 0 0 25px rgba(0, 255, 255, 0.7); /* Sombra de neón */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+    color: white; /* Color del texto */
+    transition: box-shadow 0.3s ease;
+}
+
+/* Cambiar el color del texto en la barra de direcciones */
+#urlbar-input {
+    color: white; /* Color del texto */
+}
+
+/* Color del texto para las sugerencias desplegadas */
+#urlbar-results {
+    color: rgba(255, 255, 255, 0.7); /* Color del texto de las sugerencias */
+}
