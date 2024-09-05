@@ -113,7 +113,16 @@ dex2jar-2.4/./gradlew build
 echo -e "\n\n[+] INSTALANDO FONDOS DE PANTALLA\n\n\n"
 sleep 1
 sudo git clone https://github.com/SrPatoMan/MaquinaCustom/
-sudo mv MaquinaCustom/wallpapers /usr/share/backgrounds/
+sudo rm -f /usr/share/backgrounds/*
+sudo mv MaquinaCustom/wallpapers/* /usr/share/backgrounds/
+
+## Configurando Firefox ##
+
+ruta_profiles=$HOME/.mozilla/firefox/profiles.ini
+perfil_usuario=$(cat $ruta_profiles | grep "Path" | grep "default-esr" | cut -d '=' -f 2)
+ruta_archivo=$HOME/.mozilla/firefox/$perfil_usuario/chrome
+mkdir -p $ruta_archivo
+sudo mv MaquinaCustom/config_files/firefox/userChrome.css $ruta_archivo
 
 ## Configuracion Kitty ##
 echo -e "\n\n[+] CONFIGURANDO LA KITTY\n\n\n"
