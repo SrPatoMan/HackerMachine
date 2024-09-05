@@ -19,6 +19,53 @@ sudo apt install gnome-tweaks -y
 else
 :
 fi
+########## FUNCION PARA INSTALAR HERRAMIENTAS SEGUN OS ###########
+
+hacking_tools_repo() {
+
+echo -e "\n\n[+] INSTALANDO HERRAMIENTAS PENTESTING\n"
+sleep 3
+
+echo -e "\n\n[+] DIRSEARCH\n\n"
+git clone "https://github.com/maurosoria/dirsearch.git"
+cd dirsearch/ || { echo "Error al cambiar al directorio dirsearch"; sleep 3; } 
+pipx install dirsearch
+pipx ensurepath
+source ~/.local/share/pipx/venvs/dirsearch/bin/activate
+pipx runpip dirsearch install setuptools
+rm -rf $PWD/dirsearch/
+
+echo -e "\n\n[+] SUBFINDER\n\n\n"
+sleep 1
+go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+sudo mv go/bin/subfinder /usr/bin
+sudo rm -rf go/
+
+echo -e "\n\n[+] HTTPX\n\n\n"
+sleep 1
+go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
+sudo mv go/bin/httpx /usr/bin
+sudo rm -rf go/
+
+echo -e "\n\n[+] NUCLEI\n\n\n"
+sleep 1
+go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
+sudo mv go/bin/nuclei /usr/bin
+sudo rm -rf go/
+
+}
+
+## Comprobando si se esta instalando en un kali ##
+
+kali_comprobacion=$(cat /etc/os-release | head -n 1 | cut -d '=' -f 2 | tr -d '"')
+
+if [ $kali_comprobacion == 'Kali GNU/Linux Rolling' ];then
+sudo apt install subfinder dirsearch nuclei
+else
+hacking_tools_repo
+fi
+
+
 
 echo -e "\n\n\n[+] INSTALANDO BURPSUITE...\n\n"
 
@@ -35,15 +82,6 @@ sudo ln -s /opt/Postman/Postman /usr/bin/postman
 
 echo -e "\n\n[+] INSTALANDO HERRAMIENTAS PENTESTING\n"
 sleep 3
-
-echo -e "\n\n[+] DIRSEARCH\n\n"
-git clone "https://github.com/maurosoria/dirsearch.git"
-cd dirsearch/ || { echo "Error al cambiar al directorio dirsearch"; sleep 3; } 
-pipx install dirsearch
-pipx ensurepath
-source ~/.local/share/pipx/venvs/dirsearch/bin/activate
-pipx runpip dirsearch install setuptools
-rm -rf $PWD/dirsearch/
 
 echo -e "[+] AQUATONE\n\n\n"
 sleep 1
@@ -64,12 +102,6 @@ go install github.com/lc/gau/v2/cmd/gau@latest
 sudo mv go/bin/gau /usr/bin
 sudo rm -rf go/
 
-echo -e "\n\n[+] SUBFINDER\n\n\n"
-sleep 1
-go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
-sudo mv go/bin/subfinder /usr/bin
-sudo rm -rf go/
-
 echo -e "\n\n[+] HTTPROBE\n\n\n"
 sleep 1
 git clone https://github.com/tomnomnom/httprobe
@@ -78,18 +110,6 @@ go build main.go
 mv main httprobe
 sudo mv httprobe /usr/bin
 cd ..;sudo rm -r httprobe
-
-echo -e "\n\n[+] HTTPX\n\n\n"
-sleep 1
-go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
-sudo mv go/bin/httpx /usr/bin
-sudo rm -rf go/
-
-echo -e "\n\n[+] NUCLEI\n\n\n"
-sleep 1
-go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
-sudo mv go/bin/nuclei /usr/bin
-sudo rm -rf go/
 
 echo -e "\n\n[+] HAKRAWLER\n\n\n"
 sleep 1
