@@ -74,7 +74,13 @@ sudo apt install subfinder dirsearch nuclei -y
 elif [ $parrot_comprobacion == 'Parrot' ];then
 echo -e "\n\n[+] INSTALANDO HERRAMIENTAS PENTESTING\n"
 sleep 3
-sudo apt install subfinder dirsearch nuclei -y
+sudo apt install dirsearch nuclei -y
+## En el repo de Parrot no esta subfinder ##
+echo -e "\n\n[+] SUBFINDER\n\n\n"
+sleep 1
+go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+sudo mv go/bin/subfinder /usr/bin
+sudo rm -rf go/
 else
 hacking_tools_repo
 fi
