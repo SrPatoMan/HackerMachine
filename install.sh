@@ -10,15 +10,11 @@ echo -e "\n\n\n[+] INSTALANDO PAQUETES BASICOS...\n\n\n"
 sleep 3
 sudo apt install neofetch zsh git curl wget flatpak net-tools kitty bat lsd golang nmap wireshark netcat-traditional openjdk-21-jre zip python3 python3-pip pipx -y
 
-echo -e "\n\n\n[+] ¿ESTAS USANDO GNOME? (y/n)(pulsa n sino lo sabes):\n" 
-read gnome_respuesta
-gnome_respuesta=$(echo "$gnome_respuesta" | tr '[:upper:]' '[:lower:]')
-if [ $gnome_respuesta == 'y' ];then
-echo -e "[+] Instalando GNOME Tweaks...\n"
+## Adivinando la interfaz del usuario ##
+entorno_grafico=$(echo $XDG_CURRENT_DESKTOP)
+if [ $entorno_grafico == 'ubuntu:GNOME' ]
 sudo apt install gnome-tweaks -y
-else
-:
-fi
+
 ########## FUNCION PARA INSTALAR HERRAMIENTAS SEGUN OS ###########
 
 hacking_tools_repo() {
