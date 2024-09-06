@@ -142,8 +142,8 @@ dex2jar-2.4/./gradlew build
 echo -e "\n\n[+] INSTALANDO FONDOS DE PANTALLA\n\n\n"
 sleep 1
 sudo git clone https://github.com/SrPatoMan/MaquinaCustom/
-sudo rm -f /usr/share/backgrounds/*
-sudo rm -f /usr/share/wallpapers/*
+sudo rm -rf /usr/share/backgrounds/*
+sudo rm -rf /usr/share/wallpapers/*
 sudo cp MaquinaCustom/wallpapers/* /usr/share/backgrounds/
 sudo mv MaquinaCustom/wallpapers/* /usr/share/wallpapers/
 
