@@ -53,6 +53,13 @@ go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
 sudo mv go/bin/nuclei /usr/bin
 sudo rm -rf go/
 
+echo -e "\n\n\n[+] INSTALANDO BURPSUITE...\n\n"
+
+wget "https://portswigger.net/burp/releases/download?product=community&version=2024.7.5&type=jar" -O burpsuite_community.jar
+sudo chmod +x burpsuite_community.jar
+java -jar burpsuite_community.jar
+sudo rm burpsuite_community.jar
+
 }
 
 ## Comprobando si se esta instalando en un kali ##
@@ -68,22 +75,14 @@ hacking_tools_repo
 fi
 
 
-
-echo -e "\n\n\n[+] INSTALANDO BURPSUITE...\n\n"
-
-wget "https://portswigger.net/burp/releases/download?product=community&version=2024.7.5&type=jar" -O burpsuite_community.jar
-sudo chmod +x burpsuite_community.jar
-java -jar burpsuite_community.jar
-sudo rm burpsuite_community.jar
+echo -e "\n\n[+] INSTALANDO HERRAMIENTAS PENTESTING\n"
+sleep 3
 
 echo -e "\n\n\n[+] INSTALANDO POSTMAN...\n\n"
 wget "https://dl.pstmn.io/download/latest/linux_64" -o postman.tar.gz
 sudo tar -xzf postman.tar.gz -C /opt
 sudo ln -s /opt/Postman/Postman /usr/bin/postman
 
-
-echo -e "\n\n[+] INSTALANDO HERRAMIENTAS PENTESTING\n"
-sleep 3
 
 echo -e "[+] AQUATONE\n\n\n"
 sleep 1
