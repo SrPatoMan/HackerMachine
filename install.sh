@@ -53,7 +53,7 @@ go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
 sudo mv go/bin/nuclei /usr/bin
 sudo rm -rf go/
 
-echo -e "\n\n\n[+] INSTALANDO BURPSUITE...\n\n"
+echo -e "\n\n\n[+] BURPSUITE...\n\n"
 
 wget "https://portswigger.net/burp/releases/download?product=community&version=2024.7.5&type=jar" -O burpsuite_community.jar
 sudo chmod +x burpsuite_community.jar
