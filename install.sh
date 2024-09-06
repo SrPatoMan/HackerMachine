@@ -64,7 +64,8 @@ sudo rm burpsuite_community.jar
 
 ## Comprobando si se esta instalando en un kali ##
 
-kali_comprobacion=$(cat /etc/os-release | head -n 1 | cut -d '=' -f 2 | tr -d '"')
+kali_comprobacion=$(cat /etc/os-release | head -n1 | cut -d '=' -f 2 | tr -d '"')
+parrot_comprobacion=$(cat /etc/os-release | head -n1 | cut -d '=' -f 2 | tr -d '"' | cut -d " " -f 1)
 
 if [ $kali_comprobacion == 'Kali GNU/Linux Rolling' ];then
 echo -e "\n\n[+] INSTALANDO HERRAMIENTAS PENTESTING\n"
