@@ -74,10 +74,6 @@ else
 hacking_tools_repo
 fi
 
-
-echo -e "\n\n[+] INSTALANDO HERRAMIENTAS PENTESTING\n"
-sleep 3
-
 echo -e "\n\n\n[+] INSTALANDO POSTMAN...\n\n"
 wget "https://dl.pstmn.io/download/latest/linux_64" -o postman.tar.gz
 sudo tar -xzf postman.tar.gz -C /opt
