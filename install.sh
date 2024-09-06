@@ -60,6 +60,8 @@ sudo rm -rf go/
 kali_comprobacion=$(cat /etc/os-release | head -n 1 | cut -d '=' -f 2 | tr -d '"')
 
 if [ $kali_comprobacion == 'Kali GNU/Linux Rolling' ];then
+echo -e "\n\n[+] INSTALANDO HERRAMIENTAS PENTESTING\n"
+sleep 3
 sudo apt install subfinder dirsearch nuclei -y
 else
 hacking_tools_repo
