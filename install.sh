@@ -28,7 +28,7 @@ sleep 3
 
 echo -e "\n\n[+] DIRSEARCH\n\n"
 git clone "https://github.com/maurosoria/dirsearch.git"
-cd dirsearch/ || { echo "Error al cambiar al directorio dirsearch"; sleep 3; } 
+cd dirsearch/
 pipx install dirsearch
 pipx ensurepath
 source ~/.local/share/pipx/venvs/dirsearch/bin/activate
