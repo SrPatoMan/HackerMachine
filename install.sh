@@ -71,9 +71,14 @@ if [ $kali_comprobacion == 'Kali' ];then
 echo -e "\n\n[+] INSTALANDO HERRAMIENTAS PENTESTING\n"
 sleep 3
 sudo apt install subfinder dirsearch nuclei -y
+elif [ $parrot_comprobacion == 'Parrot' ];then
+echo -e "\n\n[+] INSTALANDO HERRAMIENTAS PENTESTING\n"
+sleep 3
+sudo apt install subfinder dirsearch nuclei -y
 else
 hacking_tools_repo
 fi
+
 
 echo -e "\n\n\n[+] INSTALANDO POSTMAN...\n\n"
 wget "https://dl.pstmn.io/download/latest/linux_64" -o postman.tar.gz
