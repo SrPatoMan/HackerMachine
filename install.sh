@@ -272,6 +272,14 @@ else
 echo -e "\n[+] DIRSEARCH INSTALADO CON EXITO\n"
 fi
 
+which wfuzz 1>/dev/null
+
+if [ $? != 0 ];then
+echo -e "\n[-] Wfuzz NO instalado\n"
+else
+echo -e "\n[+] WFUZZ INSTALADO CON EXITO\n"
+fi
+
 which aquatone 1>/dev/null
 
 if [ $? != 0 ];then
