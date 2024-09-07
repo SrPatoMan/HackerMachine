@@ -1,5 +1,7 @@
 ### MI ENTORNO DE ESCRITORIO PERSOLANLIZADO ###
 
+Entorno de trabajo diseñado para pentesting y bug bounty. By Manuel Ramos (a.k.a SrPatoMan)
+
 INSTALACION:
 
 wget "https://raw.githubusercontent.com/SrPatoMan/MaquinaCustom/main/install.sh"  
