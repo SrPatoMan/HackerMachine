@@ -123,6 +123,12 @@ go install github.com/hakluke/hakrawler@latest
 sudo mv go/bin/hakrawler /usr/bin
 sudo rm -rf go/
 
+echo -e "\n\n[+] XLSNINJA\n\n\n"
+sleep 1
+wget 'https://raw.githubusercontent.com/coffinsp/lostools/coffin/xlsNinja.py'
+sudo chmod +x xlsNinja.py
+sudo mv xlsNinja.py /usr/bin
+
 ### HERRAMIENTAS PENTESTING ANDROID ###
 echo -e "\n\n\n[+] INSTALANDO HERRAMIENTAS DE ANDROID HACKING..."
 sleep 3
@@ -177,7 +183,6 @@ wget 'https://raw.githubusercontent.com/danielmiessler/SecLists/master/Fuzzing/b
 wget 'https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/CMS/wordpress.fuzz.txt'
 wget 'https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/Web-Content/CMS/wp-plugins.fuzz.txt'
 wget 'https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/Web-Content/directory-list-2.3-medium.txt'
-
 mv big-list-of-naughty-strings.txt $ruta_wordlist2
 mv wordpress.fuzz.txt $ruta_wordlist2
 mv wp-plugins.fuzz.txt $ruta_wordlist2
@@ -327,6 +332,14 @@ if [ $? != 0 ];then
 echo -e "\n[-] Hakrawler NO instalado\n"
 else
 echo -e "\n[+] HAKRAWLER INSTALADO CON EXITO\n"
+fi
+
+which xlsNinja.py 1>/dev/null
+
+if [ $? != 0 ];then
+echo -e "\n[-] Xlsninja NO instalado\n"
+else
+echo -e "\n[+] XLSNINJA INSTALADO CON EXITO\n"
 fi
 
 which d2j-dex2jar 1>/dev/null
