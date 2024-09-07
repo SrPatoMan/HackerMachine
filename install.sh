@@ -138,7 +138,7 @@ dex2jar-2.4/./gradlew build
 
 echo -e "\n\n[+] INSTALANDO FONDOS DE PANTALLA\n\n\n"
 sleep 1
-sudo git clone https://github.com/SrPatoMan/MaquinaCustom/
+sudo git clone 'https://github.com/SrPatoMan/MaquinaCustom/'
 sudo rm -rf /usr/share/backgrounds/*
 sudo rm -rf /usr/share/wallpapers/*
 sudo cp MaquinaCustom/wallpapers/* /usr/share/backgrounds/
@@ -149,13 +149,27 @@ echo -e "\n\n[+] INSTALANDO DICCIONARIOS\n\n\n"
 sleep 1
 ruta_wordlist1=$HOME/wordlists/payloads/xss_cheat_sheets
 ruta_wordlist2=$HOME/wordlists/discovery
+ruta_wordlist3=$HOME/wordlists/payloads/sqli
+ruta_wordlist4=$HOME/wordlists/payloads/lfi
+ruta_wordlist5=$HOME/wordlists/payloads/redirect
 mkdir -p $ruta_wordlist1
 mkdir -p $ruta_wordlist2
+mkdir -p $ruta_wordlist3
+mkdir -p $ruta_wordlist4
+mkdir -p $ruta_wordlist5
+
 mv MaquinaCustom/xss_cheat_sheet/* $ruta_wordlist1
 wget 'https://raw.githubusercontent.com/coffinsp/lostools/coffin/xss.txt'
-mv xss.txt $ruta_wordlist1/payloads2.txt
-
-
+mv xss.txt $ruta_wordlist1/xss_payloads2.txt
+wget 'https://raw.githubusercontent.com/coffinsp/lostools/coffin/xsspollygots.txt'
+mv xsspollygots.txt $ruta_wordlist1/xss_payloads3.txt
+git clone 'https://github.com/coffinsp/payloads' $HOME/wordlists/payloads/payloads
+git clone 'https://github.com/coffinsp/lostools/tree/coffin/payloads'
+mv payloads $ruta_wordlist3
+wget 'https://raw.githubusercontent.com/coffinsp/lostools/coffin/lfi.txt'
+mv lfi.txt $ruta_wordlist4
+git clone 'https://raw.githubusercontent.com/coffinsp/lostools/coffin/redirect.txt'
+mv redirect.txt $ruta_wordlist5
 
 ## Configurando Firefox ##
 
