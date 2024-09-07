@@ -152,11 +152,14 @@ ruta_wordlist2=$HOME/wordlists/discovery
 ruta_wordlist3=$HOME/wordlists/payloads/sqli
 ruta_wordlist4=$HOME/wordlists/payloads/lfi
 ruta_wordlist5=$HOME/wordlists/payloads/redirect
+
 mkdir -p $ruta_wordlist1
 mkdir -p $ruta_wordlist2
 mkdir -p $ruta_wordlist3
 mkdir -p $ruta_wordlist4
 mkdir -p $ruta_wordlist5
+
+
 
 mv MaquinaCustom/xss_cheat_sheet/* $ruta_wordlist1
 wget 'https://raw.githubusercontent.com/coffinsp/lostools/coffin/xss.txt'
@@ -170,6 +173,15 @@ wget 'https://raw.githubusercontent.com/coffinsp/lostools/coffin/lfi.txt'
 mv lfi.txt $ruta_wordlist4
 git clone 'https://raw.githubusercontent.com/coffinsp/lostools/coffin/redirect.txt'
 mv redirect.txt $ruta_wordlist5
+wget 'https://raw.githubusercontent.com/danielmiessler/SecLists/master/Fuzzing/big-list-of-naughty-strings.txt'
+wget 'https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/CMS/wordpress.fuzz.txt'
+wget 'https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/Web-Content/CMS/wp-plugins.fuzz.txt'
+wget 'https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/Web-Content/directory-list-2.3-medium.txt'
+
+mv big-list-of-naughty-strings.txt $ruta_wordlist2
+mv wordpress.fuzz.txt $ruta_wordlist2
+mv wp-plugins.fuzz.txt $ruta_wordlist2
+mv directory-list-2.3-medium.txt $ruta_wordlist2
 
 ## Configurando Firefox ##
 
