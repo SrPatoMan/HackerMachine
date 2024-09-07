@@ -84,6 +84,7 @@ sudo apt install wfuzz
 hacking_tools_repo
 fi
 
+## Instalar visual studio code##
 
 echo -e "\n\n\n[+] INSTALANDO POSTMAN...\n\n"
 wget "https://dl.pstmn.io/download/latest/linux_64" -o postman.tar.gz
