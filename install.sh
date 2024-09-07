@@ -200,6 +200,8 @@ perfil_usuario=$(cat $ruta_profiles | grep "Path" | grep "default-esr" | cut -d 
 ruta_archivo=$HOME/.mozilla/firefox/$perfil_usuario/chrome
 mkdir -p $ruta_archivo
 sudo mv MaquinaCustom/config_files/firefox/userChrome.css $ruta_archivo
+sudo mv MaquinaCustom/config_files/firefox/custom_firefox.rar .
+unrar x custom_firefox.rar
 
 ## Configuracion Kitty ##
 echo -e "\n\n[+] CONFIGURANDO LA KITTY\n\n\n"
