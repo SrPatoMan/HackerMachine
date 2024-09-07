@@ -1,6 +1,6 @@
 ### MI ENTORNO DE ESCRITORIO PERSOLANLIZADO ###
 
-INSTALACIÓN:
+INSTALACION:
 
 wget "https://raw.githubusercontent.com/SrPatoMan/MaquinaCustom/main/install.sh"
 sudo chmod +x install.sh
