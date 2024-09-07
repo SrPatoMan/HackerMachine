@@ -58,7 +58,7 @@ sudo rm burpsuite_community.jar
 
 }
 
-## Comprobando si se esta instalando en un kali ##
+## Comprobando del os donde se esta instalando ##
 
 kali_comprobacion=$(cat /etc/os-release | head -n1 | cut -d '=' -f 2 | tr -d '"' | cut -d " " -f 1)
 parrot_comprobacion=$(cat /etc/os-release | head -n1 | cut -d '=' -f 2 | tr -d '"' | cut -d " " -f 1)
@@ -143,6 +143,19 @@ sudo rm -rf /usr/share/backgrounds/*
 sudo rm -rf /usr/share/wallpapers/*
 sudo cp MaquinaCustom/wallpapers/* /usr/share/backgrounds/
 sudo mv MaquinaCustom/wallpapers/* /usr/share/wallpapers/
+
+## Instalando wordlists ##
+echo -e "\n\n[+] INSTALANDO DICCIONARIOS\n\n\n"
+sleep 1
+ruta_wordlist1=$HOME/wordlists/payloads/xss_cheat_sheets
+ruta_wordlist2=$HOME/wordlists/discovery
+mkdir -p $ruta_wordlist1
+mkdir -p $ruta_wordlist2
+mv MaquinaCustom/xss_cheat_sheet/* $ruta_wordlist1
+wget 'https://raw.githubusercontent.com/coffinsp/lostools/coffin/xss.txt'
+mv xss.txt $ruta_wordlist1/payloads2.txt
+
+
 
 ## Configurando Firefox ##
 
