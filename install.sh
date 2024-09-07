@@ -14,7 +14,9 @@ sudo apt install neofetch zsh git curl wget flatpak net-tools kitty bat lsd gola
 entorno_grafico=$(echo $XDG_CURRENT_DESKTOP)
 if [ $entorno_grafico == 'ubuntu:GNOME' ];then
 sudo apt install gnome-tweaks -y
-
+else
+:
+fi
 ########## FUNCION PARA INSTALAR HERRAMIENTAS SEGUN OS ###########
 
 hacking_tools_repo() {
