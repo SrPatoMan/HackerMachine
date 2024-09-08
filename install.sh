@@ -149,11 +149,11 @@ dex2jar-2.4/./gradlew build
 
 echo -e "\n\n[+] INSTALANDO FONDOS DE PANTALLA\n\n\n"
 sleep 1
-sudo git clone 'https://github.com/SrPatoMan/MaquinaCustom/'
+sudo git clone 'https://github.com/SrPatoMan/HackerMachine/'
 sudo rm -rf /usr/share/backgrounds/*
 sudo rm -rf /usr/share/wallpapers/*
-sudo cp MaquinaCustom/wallpapers/* /usr/share/backgrounds/
-sudo mv MaquinaCustom/wallpapers/* /usr/share/wallpapers/
+sudo cp HackerMachine/wallpapers/* /usr/share/backgrounds/
+sudo mv HackerMachine/wallpapers/* /usr/share/wallpapers/
 
 ## Instalando wordlists ##
 echo -e "\n\n[+] INSTALANDO DICCIONARIOS\n\n\n"
@@ -172,7 +172,7 @@ mkdir -p $ruta_wordlist5
 
 
 
-mv MaquinaCustom/xss_cheat_sheet/* $ruta_wordlist1
+mv HackerMachine/xss_cheat_sheet/* $ruta_wordlist1
 wget 'https://raw.githubusercontent.com/coffinsp/lostools/main/xss.txt'
 mv xss.txt $ruta_wordlist1/xss_payloads2.txt
 wget 'https://raw.githubusercontent.com/coffinsp/lostools/main/xsspollygots.txt'
@@ -199,21 +199,21 @@ ruta_profiles=$HOME/.mozilla/firefox/profiles.ini
 perfil_usuario=$(cat $ruta_profiles | grep "Path" | grep "default-esr" | cut -d '=' -f 2)
 ruta_archivo=$HOME/.mozilla/firefox/$perfil_usuario/chrome
 mkdir -p $ruta_archivo
-sudo mv MaquinaCustom/config_files/firefox/userChrome.css $ruta_archivo
-sudo mv MaquinaCustom/config_files/firefox/custom_firefox.rar .
+sudo mv HackerMachine/config_files/firefox/userChrome.css $ruta_archivo
+sudo mv HackerMachine/config_files/firefox/custom_firefox.rar .
 unrar x custom_firefox.rar
 
 ## Configuracion Kitty ##
 echo -e "\n\n[+] CONFIGURANDO LA KITTY\n\n\n"
 sleep 1
 mkdir $HOME/.config/kitty
-sudo mv MaquinaCustom/kitty_and_zsh_conf/kitty/kitty.conf $HOME/.config/kitty/
-sudo mv MaquinaCustom/kitty_and_zsh_conf/kitty/color.ini $HOME/.config/kitty/
+sudo mv HackerMachine/kitty_and_zsh_conf/kitty/kitty.conf $HOME/.config/kitty/
+sudo mv HackerMachine/kitty_and_zsh_conf/kitty/color.ini $HOME/.config/kitty/
 
 ## Configuracion nano ##
 echo -e "\n\n[+] CONFIGURANDO NANO\n\n\n"
 sleep 1
-sudo mv MaquinaCustom/config_files/nanorc $HOME/.nanorc
+sudo mv HackerMachine/config_files/nanorc $HOME/.nanorc
 
 ### INSTALANDO Y CONFIGURANDO ZSH ###
 echo -e "\n\n[+] INSTALANDO Y CONFIGURANDO ZSH\n\n"
@@ -222,12 +222,12 @@ chsh -s /usr/bin/zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 sudo rm $HOME/.zshrc
-sudo mv MaquinaCustom/kitty_and_zsh_conf/zshrc $HOME/.zshrc
+sudo mv HackerMachine/kitty_and_zsh_conf/zshrc $HOME/.zshrc
 
 ### AVISO ###
 echo -e "\n\n[+]CONFIGURE LA SHELL AL ACABAR LA INSTALACION CON p10k configure\n"
 echo -e "INSTALACION EN CURSO, NO TOCAR NADA AUN"
-sudo rm -rf MaquinaCustom/
+sudo rm -rf HackerMachine/
 sleep 5
 
 echo -e "\n\n\n¿ESTAS EN MAQUINA REAL (y/n)?"
