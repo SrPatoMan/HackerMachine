@@ -87,7 +87,13 @@ hacking_tools_repo
 fi
 
 ## Instalar visual studio code##
+echo -e "\n\n\n[+] INSTALANDO VSCODE...\n\n"
+wget 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64'
+sudo mv 'download?build=stable&os=linux-deb-x64' code-deb-x64
+sudo dpkg -i code-deb-x64
+sudo rm code-deb-x64
 
+## Instalar postman ##
 echo -e "\n\n\n[+] INSTALANDO POSTMAN...\n\n"
 wget "https://dl.pstmn.io/download/latest/linux_64"
 sudo mv linux_64 linux_64.tar.gz
