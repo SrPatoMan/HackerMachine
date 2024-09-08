@@ -4,7 +4,7 @@ CUSTOM DESKTOP ENVIRONMENT FOR HACKERS. By Manuel Ramos (a.k.a SrPatoMan)
 
 INSTALATION:
 
-wget "https://raw.githubusercontent.com/SrPatoMan/MaquinaCustom/main/install.sh"  
+wget "https://raw.githubusercontent.com/SrPatoMan/HackerMachine/main/install.sh"  
 chmod +x install.sh  
 ./install.sh  
 
