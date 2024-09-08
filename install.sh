@@ -89,9 +89,10 @@ fi
 ## Instalar visual studio code##
 
 echo -e "\n\n\n[+] INSTALANDO POSTMAN...\n\n"
-wget "https://dl.pstmn.io/download/latest/linux_64" -o postman.tar.gz
-sudo tar -xzf postman.tar.gz -C /opt
-sudo ln -s /opt/Postman/Postman /usr/bin/postman
+wget "https://dl.pstmn.io/download/latest/linux_64"
+sudo mv linux_64 linux_64.tar.gz
+sudo tar -xzf linux_64.tar.gz -C /opt
+#sudo ln -s /opt/Postman/Postman /usr/bin/postman
 
 
 echo -e "[+] AQUATONE\n\n\n"
