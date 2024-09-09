@@ -184,26 +184,26 @@ mkdir -p $ruta_wordlist5
 
 
 
-mv HackerMachine/xss_cheat_sheet/* $ruta_wordlist1
+sudo mv HackerMachine/xss_cheat_sheet/* $ruta_wordlist1
 wget 'https://raw.githubusercontent.com/coffinsp/lostools/main/xss.txt'
-mv xss.txt $ruta_wordlist1/xss_payloads2.txt
+sudo mv xss.txt $ruta_wordlist1/xss_payloads2.txt
 wget 'https://raw.githubusercontent.com/coffinsp/lostools/main/xsspollygots.txt'
-mv xsspollygots.txt $ruta_wordlist1/xss_payloads3.txt
+sudo mv xsspollygots.txt $ruta_wordlist1/xss_payloads3.txt
 git clone 'https://github.com/coffinsp/payloads' $HOME/wordlists/payloads/payloads
 git clone 'https://github.com/coffinsp/lostools/tree/coffin/payloads'
-mv payloads $ruta_wordlist3
+sudo mv payloads $ruta_wordlist3
 wget 'https://raw.githubusercontent.com/coffinsp/lostools/main/lfi.txt'
-mv lfi.txt $ruta_wordlist4
+sudo mv lfi.txt $ruta_wordlist4
 git clone 'https://raw.githubusercontent.com/coffinsp/lostools/main/redirect.txt'
-mv redirect.txt $ruta_wordlist5
+sudo mv redirect.txt $ruta_wordlist5
 wget 'https://raw.githubusercontent.com/danielmiessler/SecLists/master/Fuzzing/big-list-of-naughty-strings.txt'
 wget 'https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/CMS/wordpress.fuzz.txt'
 wget 'https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/Web-Content/CMS/wp-plugins.fuzz.txt'
 wget 'https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/Web-Content/directory-list-2.3-medium.txt'
-mv big-list-of-naughty-strings.txt $ruta_wordlist2
-mv wordpress.fuzz.txt $ruta_wordlist2
-mv wp-plugins.fuzz.txt $ruta_wordlist2
-mv directory-list-2.3-medium.txt $ruta_wordlist2
+sudo mv big-list-of-naughty-strings.txt $ruta_wordlist2
+sudo mv wordpress.fuzz.txt $ruta_wordlist2
+sudo mv wp-plugins.fuzz.txt $ruta_wordlist2
+sudo mv directory-list-2.3-medium.txt $ruta_wordlist2
 
 ## Configurando Firefox ##
 
