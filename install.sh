@@ -194,7 +194,7 @@ git clone 'https://github.com/coffinsp/lostools/tree/coffin/payloads'
 sudo mv payloads $ruta_wordlist3
 wget 'https://raw.githubusercontent.com/coffinsp/lostools/main/lfi.txt'
 sudo mv lfi.txt $ruta_wordlist4
-git clone 'https://raw.githubusercontent.com/coffinsp/lostools/main/redirect.txt'
+wget 'https://raw.githubusercontent.com/coffinsp/lostools/main/redirect.txt'
 sudo mv redirect.txt $ruta_wordlist5
 wget 'https://raw.githubusercontent.com/danielmiessler/SecLists/master/Fuzzing/big-list-of-naughty-strings.txt'
 wget 'https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/CMS/wordpress.fuzz.txt'
