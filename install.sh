@@ -232,6 +232,7 @@ echo -e "\n\n[+] INSTALANDO Y CONFIGURANDO ZSH\n\n"
 sleep 1
 chsh -s /usr/bin/zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+exit
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 sudo rm $HOME/.zshrc
 sudo mv HackerMachine/kitty_and_zsh_conf/zshrc $HOME/.zshrc
