@@ -159,6 +159,8 @@ go install -v github.com/PentestPad/subzy@latest
 sudo mv go/bin/subzy /usr/bin
 sudo rm -rf go/
 
+#####echo -e "\n\n[+] CORSY\n\n\n"
+
 ### HERRAMIENTAS PENTESTING ANDROID ###
 echo -e "\n\n\n[+] INSTALANDO HERRAMIENTAS DE ANDROID HACKING..."
 sleep 3
