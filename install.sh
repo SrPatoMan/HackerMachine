@@ -159,6 +159,12 @@ go install -v github.com/PentestPad/subzy@latest
 sudo mv go/bin/subzy /usr/bin
 sudo rm -rf go/
 
+echo -e "\n\n[+] SHORTSCAN\n\n\n"
+sleep 1
+go install github.com/bitquark/shortscan/cmd/shortscan@latest
+sudo mv go/bin/shortscan /usr/bin
+sudo rm -rf go/
+
 #####echo -e "\n\n[+] CORSY\n\n\n"
 
 ### HERRAMIENTAS PENTESTING ANDROID ###
@@ -311,6 +317,7 @@ comprobar_instalacion "arjun" "ARJUN"
 comprobar_instalacion "amass" "AMASS"
 comprobar_instalacion "waymore" "WAYMORE"
 comprobar_instalacion "subzy" "SUBZY"
+comprobar_instalacion "shortscan" "SHORTSCAN"
 
 
 echo -e "\n\n\n################### INSTALACION FINALIZADA ###################\n\n\n"
