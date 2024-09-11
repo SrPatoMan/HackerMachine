@@ -149,6 +149,10 @@ sleep 1
 pip3 install uro
 sudo mv $HOME/.local/bin/uro /usr/bin
 
+echo -e "\n\n[+] WAYMORE\n\n\n"
+sleep 1
+pip install waymore
+
 ### HERRAMIENTAS PENTESTING ANDROID ###
 echo -e "\n\n\n[+] INSTALANDO HERRAMIENTAS DE ANDROID HACKING..."
 sleep 3
@@ -297,6 +301,7 @@ comprobar_instalacion "d2j-dex2jar" "DEX2JAR"
 comprobar_instalacion "uro" "URO"
 comprobar_instalacion "arjun" "ARJUN"
 comprobar_instalacion "amass" "AMASS"
+comprobar_instalacion "waymore" "WAYMORE"
 
 
 echo -e "\n\n\n################### INSTALACION FINALIZADA ###################\n\n\n"
