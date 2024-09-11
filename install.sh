@@ -153,6 +153,12 @@ echo -e "\n\n[+] WAYMORE\n\n\n"
 sleep 1
 pip install waymore
 
+echo -e "\n\n[+] SUBZY\n\n\n"
+sleep 1
+go install -v github.com/PentestPad/subzy@latest
+sudo mv go/bin/subzy /usr/bin
+sudo rm -rf go/
+
 ### HERRAMIENTAS PENTESTING ANDROID ###
 echo -e "\n\n\n[+] INSTALANDO HERRAMIENTAS DE ANDROID HACKING..."
 sleep 3
@@ -302,6 +308,7 @@ comprobar_instalacion "uro" "URO"
 comprobar_instalacion "arjun" "ARJUN"
 comprobar_instalacion "amass" "AMASS"
 comprobar_instalacion "waymore" "WAYMORE"
+comprobar_instalacion "subzy" "SUBZY"
 
 
 echo -e "\n\n\n################### INSTALACION FINALIZADA ###################\n\n\n"
