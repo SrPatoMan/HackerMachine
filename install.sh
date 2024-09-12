@@ -63,6 +63,8 @@ echo -e "\n\n\n[+] GOSPIDER...\n\n"
 echo -e "\n\n\n[+] ARJUN...\n\n"
 
 echo -e "\n\n\n[+] AMASS...\n\n"
+
+echo -e "\n\n\n[+] ASSETFINDER...\n\n"
 }
 
 ## Comprobando del os donde se esta instalando ##
@@ -73,11 +75,11 @@ parrot_comprobacion=$(cat /etc/os-release | head -n1 | cut -d '=' -f 2 | tr -d '
 if [ $kali_comprobacion == 'Kali' ];then
 echo -e "\n\n[+] INSTALANDO HERRAMIENTAS PENTESTING\n"
 sleep 3
-sudo apt install subfinder dirsearch nuclei wfuzz gospider arjun amass -y
+sudo apt install subfinder dirsearch nuclei wfuzz gospider arjun amass assetfinder-y
 elif [ $parrot_comprobacion == 'Parrot' ];then
 echo -e "\n\n[+] INSTALANDO HERRAMIENTAS PENTESTING\n"
 sleep 3
-sudo apt install dirsearch nuclei wfuzz gospider arjun -y
+sudo apt install dirsearch nuclei wfuzz gospider arjun assetfinder -y
 ## En el repo de Parrot no esta subfinder ##
 echo -e "\n\n[+] SUBFINDER\n\n\n"
 sleep 1
