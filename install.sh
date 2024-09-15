@@ -58,13 +58,15 @@ sudo chmod +x burpsuite_community.jar
 java -jar burpsuite_community.jar
 sudo rm burpsuite_community.jar
 
-echo -e "\n\n\n[+] GOSPIDER...\n\n"
+#echo -e "\n\n\n[+] GOSPIDER...\n\n"
 
-echo -e "\n\n\n[+] ARJUN...\n\n"
+#echo -e "\n\n\n[+] ARJUN...\n\n"
 
-echo -e "\n\n\n[+] AMASS...\n\n"
+#echo -e "\n\n\n[+] AMASS...\n\n"
 
-echo -e "\n\n\n[+] ASSETFINDER...\n\n"
+#echo -e "\n\n\n[+] ASSETFINDER...\n\n"
+
+#echo -e "\n\n\n[+] JADX...\n\n"
 }
 
 ## Comprobando del os donde se esta instalando ##
@@ -75,11 +77,11 @@ parrot_comprobacion=$(cat /etc/os-release | head -n1 | cut -d '=' -f 2 | tr -d '
 if [ $kali_comprobacion == 'Kali' ];then
 echo -e "\n\n[+] INSTALANDO HERRAMIENTAS PENTESTING\n"
 sleep 3
-sudo apt install subfinder dirsearch nuclei wfuzz gospider arjun amass assetfinder-y
+sudo apt install subfinder dirsearch nuclei wfuzz gospider arjun amass assetfinder jadx -y
 elif [ $parrot_comprobacion == 'Parrot' ];then
 echo -e "\n\n[+] INSTALANDO HERRAMIENTAS PENTESTING\n"
 sleep 3
-sudo apt install dirsearch nuclei wfuzz gospider arjun assetfinder -y
+sudo apt install dirsearch nuclei wfuzz gospider arjun assetfinder jadx -y
 ## En el repo de Parrot no esta subfinder ##
 echo -e "\n\n[+] SUBFINDER\n\n\n"
 sleep 1
@@ -142,9 +144,9 @@ sudo rm -rf go/
 
 echo -e "\n\n[+] XLSNINJA\n\n\n"
 sleep 1
-wget 'https://raw.githubusercontent.com/coffinsp/lostools/main/xlsNinja.py'
-sudo chmod +x xlsNinja.py
-sudo mv xlsNinja.py /usr/bin
+wget 'https://raw.githubusercontent.com/coffinsp/lostools/main/lostsec.py'
+sudo chmod +x lostsec.py
+sudo mv lostsec.py /usr/bin
 
 echo -e "\n\n[+] URO\n\n\n"
 sleep 1
@@ -320,6 +322,7 @@ comprobar_instalacion "amass" "AMASS"
 comprobar_instalacion "waymore" "WAYMORE"
 comprobar_instalacion "subzy" "SUBZY"
 comprobar_instalacion "shortscan" "SHORTSCAN"
+comprobar_instalacion "jadx" "JADX"
 
 
 echo -e "\n\n\n################### INSTALACION FINALIZADA ###################\n\n\n"
