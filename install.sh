@@ -34,7 +34,7 @@ sudo apt install neofetch zsh git curl wget flatpak net-tools kitty bat lsd gola
 
 ## Adivinando la interfaz del usuario ##
 entorno_grafico=$(echo $XDG_CURRENT_DESKTOP)
-if [ $entorno_grafico == 'ubuntu:GNOME' ];then
+if [ $entorno_grafico == 'ubuntu:GNOME' || $entorno_grafico == 'GNOME' ];then
 sudo apt install gnome-tweaks -y
 else
 :
