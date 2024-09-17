@@ -246,10 +246,12 @@ wget 'https://raw.githubusercontent.com/danielmiessler/SecLists/master/Fuzzing/b
 wget 'https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/CMS/wordpress.fuzz.txt'
 wget 'https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/Web-Content/CMS/wp-plugins.fuzz.txt'
 wget 'https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/Web-Content/directory-list-2.3-medium.txt'
+wget 'https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/Web-Content/directory-list-2.3-big.txt'
 sudo mv big-list-of-naughty-strings.txt $ruta_wordlist2
 sudo mv wordpress.fuzz.txt $ruta_wordlist2
 sudo mv wp-plugins.fuzz.txt $ruta_wordlist2
 sudo mv directory-list-2.3-medium.txt $ruta_wordlist2
+sudo mv directory-list-2.3-big.txt $ruta_wordlist2
 
 ## Configurando Firefox ##
 
