@@ -262,6 +262,15 @@ sudo mv HackerMachine/config_files/firefox/userChrome.css $ruta_archivo
 sudo mv HackerMachine/config_files/firefox/custom_firefox.rar .
 unrar x custom_firefox.rar
 
+
+## Configurar BSPWM ##
+mkdir -p ~/.config/bspwm ~/.config/sxhkd
+cp /usr/share/doc/bspwm/examples/bspwmrc ~/.config/bspwm/
+cp /usr/share/doc/bspwm/examples/sxhkdrc ~/.config/sxhkd/
+chmod +x ~/.config/bspwm/bspwmrc
+
+
+
 ## Configuracion Kitty ##
 echo -e "\n\n[+] CONFIGURANDO LA KITTY\n\n\n"
 sleep 1
