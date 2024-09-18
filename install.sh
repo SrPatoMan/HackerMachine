@@ -29,7 +29,7 @@ sudo apt update && sudo apt upgrade -y
 
 echo -e "\n\n\n[+] INSTALANDO PAQUETES BASICOS...\n\n\n"
 sleep 3
-sudo apt install neofetch zsh git curl wget flatpak net-tools kitty bat lsd golang nmap wireshark netcat-traditional openjdk-21-jre zip python3 python3-pip pipx cmatrix -y
+sudo apt install neofetch zsh git curl wget flatpak net-tools kitty bat lsd golang nmap wireshark netcat-traditional openjdk-21-jre zip python3 python3-pip pipx cmatrix bspwm sxhkd build-essential cmake pkg-config libxcb1-dev libxcb-xkb-dev libxcb-randr0-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-icccm4-dev libxcb-ewmh-dev libxcb-xrm0 libxcb-xrm-dev libx11-xcb-dev libxft-dev libfontconfig1-dev -y
 
 ## Adivinando la interfaz del usuario ##
 entorno_grafico=$(echo $XDG_CURRENT_DESKTOP)
