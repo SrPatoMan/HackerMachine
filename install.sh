@@ -29,7 +29,7 @@ sudo apt update && sudo apt upgrade -y
 
 echo -e "\n\n\n[+] INSTALANDO PAQUETES BASICOS...\n\n\n"
 sleep 3
-sudo apt install neofetch zsh git curl wget flatpak net-tools kitty bat lsd golang nmap wireshark netcat-traditional openjdk-21-jre zip python3 python3-pip pipx cmatrix bspwm sxhkd build-essential cmake pkg-config libxcb1-dev libxcb-xkb-dev libxcb-randr0-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-icccm4-dev libxcb-ewmh-dev libxcb-xrm0 libxcb-xrm-dev libx11-xcb-dev libxft-dev libfontconfig1-dev -y
+sudo apt install neofetch zsh git curl wget flatpak net-tools kitty bat lsd golang nmap wireshark netcat-traditional openjdk-21-jre zip python3 python3-pip pipx cmatrix bspwm sxhkd build-essential cmake pkg-config libxcb1-dev libxcb-xkb-dev libxcb-randr0-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-icccm4-dev libxcb-ewmh-dev libxcb-xrm0 libxcb-xrm-dev libx11-xcb-dev libxft-dev libfontconfig1-dev python3-sphinx libcairo2-dev libfontconfig1-dev libasound2-dev libcurl4-openssl-dev libmpdclient-dev libiw-dev -y
 
 ## Adivinando la interfaz del usuario ##
 entorno_grafico=$(echo $XDG_CURRENT_DESKTOP)
@@ -202,7 +202,6 @@ wget "https://github.com/pxb1988/dex2jar/archive/refs/tags/v2.4.tar.gz"
 tar -xzf v2.4.tar.gz
 dex2jar-2.4/./gradlew build
 
-
 ## Wallpapers ##
 
 echo -e "\n\n[+] INSTALANDO FONDOS DE PANTALLA\n\n\n"
@@ -289,6 +288,12 @@ echo -e "\n\n[+]CONFIGURE LA SHELL AL ACABAR LA INSTALACION CON p10k configure\n
 echo -e "INSTALACION EN CURSO, NO TOCAR NADA AUN"
 sudo rm -rf HackerMachine/
 sleep 5
+
+## Polybar ##
+git clone --recursive https://github.com/polybar/polybar.git
+cd polybar
+
+
 
 echo -e "\n\n\n¿ESTAS EN MAQUINA REAL (y/n)?"
 read maquina_real
