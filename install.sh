@@ -289,10 +289,6 @@ echo -e "INSTALACION EN CURSO, NO TOCAR NADA AUN"
 sudo rm -rf HackerMachine/
 sleep 5
 
-## Polybar ##
-git clone --recursive https://github.com/polybar/polybar.git
-cd polybar
-
 
 
 echo -e "\n\n\n¿ESTAS EN MAQUINA REAL (y/n)?"
