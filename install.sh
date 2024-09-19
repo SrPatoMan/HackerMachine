@@ -211,6 +211,11 @@ go install github.com/tomnomnom/qsreplace@latest
 sudo mv go/bin/qsreplace /usr/bin
 sudo rm -rf go/
 
+echo -e "\n\n[+] AIRIXSS\n\n\n"
+sleep 1
+go install github.com/ferreiraklet/airixss@latest
+sudo mv go/bin/airixss /usr/bin
+sudo rm -rf go/
 
 #####echo -e "\n\n[+] CORSY\n\n\n"
 
@@ -382,6 +387,7 @@ comprobar_instalacion "ffuf" "FFUF"
 comprobar_instalacion "gf" "GF"
 comprobar_instalacion "katana" "KATANA"
 comprobar_instalacion "qsreplace" "QSREPLACE"
+comprobar_instalacion "airixss" "AIRIXSS"
 
 
 echo -e "\n\n\n################### INSTALACION FINALIZADA ###################\n\n\n"
