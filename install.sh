@@ -134,6 +134,7 @@ sudo ln -s /opt/Postman/Postman /usr/bin/postman
 ## Xmind ##
 wget "https://www.xmind.app/zen/download/linux_deb/"
 sudo dpkg -i Xmind-for-Linux-amd64bit-24.04.10311-202405240010.deb
+mkdir -p $HOME/.local/xmind
 
 ## Herramientas hacking ##
 echo -e "[+] AQUATONE\n\n\n"
