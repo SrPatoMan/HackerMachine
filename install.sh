@@ -193,6 +193,25 @@ go install github.com/bitquark/shortscan/cmd/shortscan@latest
 sudo mv go/bin/shortscan /usr/bin
 sudo rm -rf go/
 
+echo -e "\n\n[+] GF\n\n\n"
+sleep 1
+go install github.com/tomnomnom/gf@latest
+sudo mv go/bin/gf /usr/bin 
+sudo rm -rf go/
+
+echo -e "\n\n[+] KATANA\n\n\n"
+sleep 1
+go install github.com/projectdiscovery/katana/cmd/katana@latest
+sudo mv go/bin/katana /usr/bin
+sudo rm -rf go/
+
+echo -e "\n\n[+] QSREPLACE\n\n\n"
+sleep 1
+go install github.com/tomnomnom/qsreplace@latest
+sudo mv go/bin/qsreplace /usr/bin
+sudo rm -rf go/
+
+
 #####echo -e "\n\n[+] CORSY\n\n\n"
 
 ### HERRAMIENTAS PENTESTING ANDROID ###
@@ -360,6 +379,9 @@ comprobar_instalacion "subzy" "SUBZY"
 comprobar_instalacion "shortscan" "SHORTSCAN"
 comprobar_instalacion "jadx" "JADX"
 comprobar_instalacion "ffuf" "FFUF"
+comprobar_instalacion "gf" "GF"
+comprobar_instalacion "katana" "KATANA"
+comprobar_instalacion "qsreplace" "QSREPLACE"
 
 
 echo -e "\n\n\n################### INSTALACION FINALIZADA ###################\n\n\n"
