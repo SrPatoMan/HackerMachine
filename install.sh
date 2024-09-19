@@ -131,7 +131,11 @@ sudo mv linux_64 linux_64.tar.gz
 sudo tar -xzf linux_64.tar.gz -C /opt
 sudo ln -s /opt/Postman/Postman /usr/bin/postman
 
+## Xmind ##
+wget "https://www.xmind.app/zen/download/linux_deb/"
+sudo dpkg -i Xmind-for-Linux-amd64bit-24.04.10311-202405240010.deb
 
+## Herramientas hacking ##
 echo -e "[+] AQUATONE\n\n\n"
 sleep 1
 wget "https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_linux_amd64_1.7.0.zip"
@@ -388,6 +392,7 @@ comprobar_instalacion "gf" "GF"
 comprobar_instalacion "katana" "KATANA"
 comprobar_instalacion "qsreplace" "QSREPLACE"
 comprobar_instalacion "airixss" "AIRIXSS"
+comprobar_instalacion "xmind" "XMIND"
 
 
 echo -e "\n\n\n################### INSTALACION FINALIZADA ###################\n\n\n"
