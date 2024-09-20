@@ -173,7 +173,7 @@ sudo rm -rf go/
 
 echo -e "\n\n[+] XLSNINJA\n\n\n"
 sleep 1
-wget 'https://raw.githubusercontent.com/coffinsp/lostools/main/lostsec.py'
+wget 'https://raw.githubusercontent.com/coffinsp/lostools/refs/heads/main/lostsec.py'
 sudo chmod +x lostsec.py
 sudo mv lostsec.py /usr/bin
 
@@ -262,16 +262,16 @@ mkdir -p $ruta_wordlist5
 
 
 sudo mv HackerMachine/xss_cheat_sheet/* $ruta_wordlist1
-wget 'https://raw.githubusercontent.com/coffinsp/lostools/main/xss.txt'
+wget 'https://raw.githubusercontent.com/coffinsp/lostools/refs/heads/main/xss.txt'
 sudo mv xss.txt $ruta_wordlist1/xss_payloads2.txt
-wget 'https://raw.githubusercontent.com/coffinsp/lostools/main/xsspollygots.txt'
+wget 'https://raw.githubusercontent.com/coffinsp/lostools/refs/heads/main/xsspollygots.txt'
 sudo mv xsspollygots.txt $ruta_wordlist1/xss_payloads3.txt
 git clone 'https://github.com/coffinsp/payloads' $HOME/wordlists/payloads/payloads
-git clone 'https://github.com/coffinsp/lostools/tree/coffin/payloads'
+git clone 'https://github.com/coffinsp/lostools/tree/main/payloads'
 sudo mv payloads $ruta_wordlist3
-wget 'https://raw.githubusercontent.com/coffinsp/lostools/main/lfi.txt'
+wget 'https://raw.githubusercontent.com/coffinsp/lostools/refs/heads/main/lfi.txt'
 sudo mv lfi.txt $ruta_wordlist4
-wget 'https://raw.githubusercontent.com/coffinsp/lostools/main/redirect.txt'
+wget 'https://raw.githubusercontent.com/coffinsp/lostools/refs/heads/main/redirect.txt'
 sudo mv redirect.txt $ruta_wordlist5
 wget 'https://raw.githubusercontent.com/danielmiessler/SecLists/master/Fuzzing/big-list-of-naughty-strings.txt'
 wget 'https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/CMS/wordpress.fuzz.txt'
