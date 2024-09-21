@@ -180,7 +180,7 @@ sudo mv lostsec.py /usr/bin
 
 echo -e "\n\n[+] URO\n\n\n"
 sleep 1
-pip3 install uro
+pipx install uro
 sudo mv $HOME/.local/bin/uro /usr/bin
 
 echo -e "\n\n[+] WAYMORE\n\n\n"
