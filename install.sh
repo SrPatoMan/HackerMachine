@@ -133,7 +133,8 @@ sudo ln -s /opt/Postman/Postman /usr/bin/postman
 
 ## Xmind ##
 wget "https://www.xmind.app/zen/download/linux_deb/"
-sudo dpkg -i Xmind-for-Linux-amd64bit-24.04.10311-202405240010.deb
+mv index.html xmind.deb
+sudo dpkg -i xmind.deb
 mkdir -p $HOME/.local/xmind
 
 ## Herramientas hacking ##
@@ -309,6 +310,7 @@ sleep 1
 mkdir $HOME/.config/kitty
 sudo mv HackerMachine/kitty_and_zsh_conf/kitty/kitty.conf $HOME/.config/kitty/
 sudo mv HackerMachine/kitty_and_zsh_conf/kitty/color.ini $HOME/.config/kitty/
+mkdir -p $HOME/.powerlevel10k/powerlevel10k.zsh-theme
 
 ## Configuracion nano ##
 echo -e "\n\n[+] CONFIGURANDO NANO\n\n\n"
