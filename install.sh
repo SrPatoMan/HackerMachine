@@ -223,6 +223,9 @@ go install github.com/ferreiraklet/airixss@latest
 sudo mv go/bin/airixss /usr/bin
 sudo rm -rf go/
 
+echo -e "\n\n[+] SECRETFINDER\n\n\n"
+sleep 1
+
 #####echo -e "\n\n[+] CORSY\n\n\n"
 
 ### HERRAMIENTAS PENTESTING ANDROID ###
@@ -396,6 +399,7 @@ comprobar_instalacion "katana" "KATANA"
 comprobar_instalacion "qsreplace" "QSREPLACE"
 comprobar_instalacion "airixss" "AIRIXSS"
 comprobar_instalacion "xmind" "XMIND"
+comprobar_instalacion "secretfinder" "SECRETFINDER"
 
 
 echo -e "\n\n\n################### INSTALACION FINALIZADA ###################\n\n\n"
