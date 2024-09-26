@@ -93,25 +93,30 @@ sudo rm burpsuite_community.jar
 
 }
 
-## Comprobando del os donde se esta instalando ##
+parrot_tools() {
 
-kali_comprobacion=$(cat /etc/os-release | head -n1 | cut -d '=' -f 2 | tr -d '"' | cut -d " " -f 1)
-parrot_comprobacion=$(cat /etc/os-release | head -n1 | cut -d '=' -f 2 | tr -d '"' | cut -d " " -f 1)
-
-if [ $kali_comprobacion == 'Kali' ];then
-echo -e "\n\n[+] INSTALANDO HERRAMIENTAS PENTESTING\n"
-sleep 3
-sudo apt install subfinder dirsearch nuclei wfuzz gospider arjun amass assetfinder jadx ffuf -y
-elif [ $parrot_comprobacion == 'Parrot' ];then
-echo -e "\n\n[+] INSTALANDO HERRAMIENTAS PENTESTING\n"
-sleep 3
-sudo apt install dirsearch nuclei wfuzz gospider arjun assetfinder jadx ffuf -y
-## En el repo de Parrot no esta subfinder ##
 echo -e "\n\n[+] SUBFINDER\n\n\n"
 sleep 1
 go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 sudo mv go/bin/subfinder /usr/bin
 sudo rm -rf go/
+
+}
+
+## Comprobando del os donde se esta instalando ##
+
+os_comprobacion=$(cat /etc/os-release | head -n1 | cut -d '=' -f 2 | tr -d '"' | cut -d " " -f 1)
+
+if [ "$os_comprobacion" == "Kali" ]; then
+echo -e "\n\n[+] INSTALANDO HERRAMIENTAS PENTESTING\n"
+sleep 3
+sudo apt install subfinder dirsearch nuclei wfuzz gospider arjun amass assetfinder jadx ffuf -y
+elif [ $os_comprobacion == 'Parrot' ];then
+echo -e "\n\n[+] INSTALANDO HERRAMIENTAS PENTESTING\n"
+sleep 3
+sudo apt install dirsearch nuclei wfuzz gospider arjun assetfinder jadx ffuf -y
+## En el repo de Parrot hay herramientas que si estan en Kali y no en Parrot ##
+parrot_tools
 else
 sudo apt install wfuzz
 hacking_tools
