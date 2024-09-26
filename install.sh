@@ -40,7 +40,7 @@ else
 fi
 ########## FUNCION PARA INSTALAR HERRAMIENTAS SEGUN OS ###########
 
-hacking_tools_repo() {
+hacking_tools() {
 
 echo -e "\n\n[+] INSTALANDO HERRAMIENTAS PENTESTING\n"
 sleep 3
@@ -114,7 +114,7 @@ sudo mv go/bin/subfinder /usr/bin
 sudo rm -rf go/
 else
 sudo apt install wfuzz
-hacking_tools_repo
+hacking_tools
 fi
 
 ## Instalar visual studio code##
