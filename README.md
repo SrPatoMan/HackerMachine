@@ -2,6 +2,8 @@
 
 CUSTOM DESKTOP ENVIRONMENT FOR HACKERS. By Manuel Ramos (a.k.a SrPatoMan)
 
+(Aviable to Kali Linux, Parrot OS and Ubuntu)
+
 INSTALLATION:
 
 wget "https://raw.githubusercontent.com/SrPatoMan/HackerMachine/main/install.sh"  
