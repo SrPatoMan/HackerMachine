@@ -177,7 +177,7 @@ go install github.com/hakluke/hakrawler@latest
 sudo mv go/bin/hakrawler /usr/bin
 sudo rm -rf go/
 
-echo -e "\n\n[+] XLSNINJA\n\n\n"
+echo -e "\n\n[+] LOSTSEC\n\n\n"
 sleep 1
 wget 'https://raw.githubusercontent.com/coffinsp/lostools/refs/heads/main/lostsec.py'
 sudo chmod +x lostsec.py
@@ -318,7 +318,8 @@ sudo mv *.ttf /usr/share/fonts
 sudo rm Hack.zip LICENSE.md README.md
 
 wget 'https://github.com/neovim/neovim/releases/download/v0.10.0/nvim.appimage'
-chmod +x nvim.appimage && ./nvim.appimage --appimage-extract
+chmod +x nvim.appimage
+sudo mv nvim.appimage /usr/bin/nvim
 
 rm -rf ~/.config/nvim
 rm -rf ~/.local/state/nvim
@@ -411,7 +412,7 @@ comprobar_instalacion "waybackurls" "WAYBACKURLS"
 comprobar_instalacion "gau" "GAU"
 comprobar_instalacion "httprobe" "HTTPROBE"
 comprobar_instalacion "hakrawler" "HAKRAWLER"
-comprobar_instalacion "xlsNinja.py" "XLSNINJA"
+comprobar_instalacion "lostsec.py" "XLSNINJA"
 comprobar_instalacion "d2j-dex2jar" "DEX2JAR"
 comprobar_instalacion "uro" "URO"
 comprobar_instalacion "arjun" "ARJUN"
@@ -428,5 +429,6 @@ comprobar_instalacion "airixss" "AIRIXSS"
 comprobar_instalacion "xmind" "XMIND"
 comprobar_instalacion "secretfinder" "SECRETFINDER"
 
+rm genymotion-3.7.1-linux_x64.bin linux_64.tar.gz v2.4.tar.gz xmind.deb
 
 echo -e "\n\n\n################### INSTALACION FINALIZADA ###################\n\n\n"
