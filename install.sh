@@ -29,7 +29,7 @@ sudo apt update && sudo apt upgrade -y
 
 echo -e "\n\n\n[+] INSTALANDO PAQUETES BASICOS...\n\n\n"
 sleep 3
-sudo apt install neofetch zsh git curl wget flatpak net-tools kitty neovim ripgrep gcc make bat gedit picom lsd golang nmap wireshark netcat-traditional chromium unrar whatweb openjdk-21-jre zip python3 python3-pip python3-setuptools pipx cmatrix bspwm sxhkd build-essential cmake pkg-config polybar libxcb1-dev libxcb-xkb-dev libxcb-randr0-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-icccm4-dev libxcb-ewmh-dev libxcb-xrm0 libxcb-xrm-dev libx11-xcb-dev libxft-dev libfontconfig1-dev python3-sphinx libcairo2-dev libfontconfig1-dev libasound2-dev libcurl4-openssl-dev libmpdclient-dev libiw-dev libpulse-dev libxcb-composite0-dev xcb-proto python3-xcbgen libjsoncpp-dev libjsoncpp-dev -y
+sudo apt install neofetch zsh git curl wget flatpak net-tools kitty ripgrep gcc make fuse bat gedit picom lsd golang nmap wireshark netcat-traditional chromium unrar whatweb openjdk-21-jre zip python3 python3-pip python3-setuptools pipx cmatrix bspwm sxhkd build-essential cmake pkg-config polybar libxcb1-dev libxcb-xkb-dev libxcb-randr0-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-icccm4-dev libxcb-ewmh-dev libxcb-xrm0 libxcb-xrm-dev libx11-xcb-dev libxft-dev libfontconfig1-dev python3-sphinx libcairo2-dev libfontconfig1-dev libasound2-dev libcurl4-openssl-dev libmpdclient-dev libiw-dev libpulse-dev libxcb-composite0-dev xcb-proto python3-xcbgen libjsoncpp-dev libjsoncpp-dev -y
 
 ## Adivinando la interfaz del usuario ##
 entorno_grafico=$(echo $XDG_CURRENT_DESKTOP)
@@ -310,6 +310,9 @@ wget 'https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Hack.zip'
 sudo unzip Hack.zip
 sudo mv *.ttf /usr/share/fonts
 sudo rm Hack.zip LICENSE.md README.md
+
+wget 'https://github.com/neovim/neovim/releases/download/v0.10.0/nvim.appimage'
+chmod +x nvim.appimage && ./nvim.appimage
 
 rm -rf ~/.config/nvim
 rm -rf ~/.local/state/nvim
