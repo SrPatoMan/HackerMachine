@@ -312,7 +312,7 @@ sudo mv *.ttf /usr/share/fonts
 sudo rm Hack.zip LICENSE.md README.md
 
 wget 'https://github.com/neovim/neovim/releases/download/v0.10.0/nvim.appimage'
-chmod +x nvim.appimage && ./nvim.appimage
+chmod +x nvim.appimage && ./nvim.appimage --appimage-extract
 
 rm -rf ~/.config/nvim
 rm -rf ~/.local/state/nvim
