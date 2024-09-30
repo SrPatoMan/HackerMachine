@@ -27,3 +27,6 @@ chmod +x install.sh
 
 
 
+![image](https://github.com/user-attachments/assets/d98729b7-6d84-4af4-9a9e-22f247ab1bc1)
+
+
