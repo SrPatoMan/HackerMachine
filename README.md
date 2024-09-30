@@ -15,11 +15,14 @@ chmod +x install.sh
 
 
 
+![image](https://github.com/user-attachments/assets/322217b6-bd01-48a7-9e1c-7db4540d615a)
+
+
+
 ![image](https://github.com/user-attachments/assets/9bb14690-08ed-4ee5-b013-10b651f55970)
 
 
 
-![image](https://github.com/user-attachments/assets/322217b6-bd01-48a7-9e1c-7db4540d615a)
 
 
 
