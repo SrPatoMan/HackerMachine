@@ -311,7 +311,7 @@ sudo mv HackerMachine/config_files/firefox/userChrome.css $ruta_archivo
 sudo mv HackerMachine/config_files/firefox/custom_firefox.rar .
 unrar x custom_firefox.rar
 
-## INSTALACION NEOVIM + Prerrequisitos ##
+## INSTALACION NEOVIM con NVCHAD + Prerrequisitos ##
 wget 'https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Hack.zip'
 sudo unzip Hack.zip
 sudo mv *.ttf /usr/share/fonts
@@ -325,7 +325,7 @@ rm -rf ~/.config/nvim
 rm -rf ~/.local/state/nvim
 rm -rf ~/.local/share/nvim
 
-
+git clone https://github.com/NvChad/starter ~/.config/nvim
 
 ## Configurar BSPWM ##
 mkdir -p ~/.config/bspwm ~/.config/sxhkd
