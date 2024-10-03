@@ -190,7 +190,7 @@ sudo mv $HOME/.local/bin/uro /usr/bin
 
 echo -e "\n\n[+] WAYMORE\n\n\n"
 sleep 1
-pip install waymore
+pipx install waymore
 
 echo -e "\n\n[+] SUBZY\n\n\n"
 sleep 1
