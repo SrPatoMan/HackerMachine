@@ -300,6 +300,7 @@ sudo mv database.txt $ruta_wordlist6
 sudo mv zipfiles.txt $ruta_wordlist6
 git clone https://github.com/0xPugal/fuzz4bounty
 sudo mv fuzz4bounty/fuzz4bounty $HOME/wordlists/file_leaks
+sudo rm -rf fuzz4bounty
 
 ## Configurando Firefox ##
 
