@@ -290,6 +290,7 @@ wget 'https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery
 wget 'https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/Web-Content/directory-list-2.3-big.txt'
 wget 'https://raw.githubusercontent.com/SrPatoMan/bbtips/refs/heads/main/wordlists/bbtips.txt'
 wget 'https://raw.githubusercontent.com/dkcyberz/Harpy/refs/heads/main/Hidden/database.txt'
+wget 'https://wordlists-cdn.assetnote.io/data/automated/httparchive_subdomains_2024_05_28.txt'
 sudo mv big-list-of-naughty-strings.txt $ruta_wordlist2
 sudo mv wordpress.fuzz.txt $ruta_wordlist2
 sudo mv wp-plugins.fuzz.txt $ruta_wordlist2
@@ -298,6 +299,7 @@ sudo mv directory-list-2.3-big.txt $ruta_wordlist2
 sudo mv bbtips.txt $ruta_wordlist6
 sudo mv database.txt $ruta_wordlist6
 sudo mv zipfiles.txt $ruta_wordlist6
+sudo mv httparchive_subdomains_2024_05_28.txt $ruta_wordlist2
 git clone https://github.com/0xPugal/fuzz4bounty
 sudo mv fuzz4bounty/fuzz4bounty $HOME/wordlists/file_leaks
 sudo rm -rf fuzz4bounty
