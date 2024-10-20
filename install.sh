@@ -29,7 +29,7 @@ sudo apt update && sudo apt upgrade -y
 
 echo -e "\n\n\n[+] INSTALANDO PAQUETES BASICOS...\n\n\n"
 sleep 3
-sudo apt install ssh neofetch zsh git curl wget flatpak net-tools kitty ripgrep gcc make bat gedit picom lsd golang nmap wireshark netcat-traditional chromium unrar whatweb openjdk-21-jre zip python3 python3-pip python3-setuptools pipx cmatrix bspwm sxhkd build-essential cmake pkg-config polybar libxcb1-dev libxcb-xkb-dev libxcb-randr0-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-icccm4-dev libxcb-ewmh-dev libxcb-xrm0 libxcb-xrm-dev libx11-xcb-dev libxft-dev libfontconfig1-dev python3-sphinx libcairo2-dev libfontconfig1-dev libasound2-dev libcurl4-openssl-dev libmpdclient-dev libiw-dev libpulse-dev libxcb-composite0-dev xcb-proto python3-xcbgen libjsoncpp-dev libjsoncpp-dev -y
+sudo apt install ssh adb neofetch zsh git curl wget flatpak net-tools kitty ripgrep gcc make bat gedit picom lsd golang nmap wireshark netcat-traditional chromium unrar whatweb openjdk-21-jre zip python3 python3-pip python3-setuptools pipx cmatrix bspwm sxhkd build-essential cmake pkg-config polybar libxcb1-dev libxcb-xkb-dev libxcb-randr0-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-icccm4-dev libxcb-ewmh-dev libxcb-xrm0 libxcb-xrm-dev libx11-xcb-dev libxft-dev libfontconfig1-dev python3-sphinx libcairo2-dev libfontconfig1-dev libasound2-dev libcurl4-openssl-dev libmpdclient-dev libiw-dev libpulse-dev libxcb-composite0-dev xcb-proto python3-xcbgen libjsoncpp-dev libjsoncpp-dev -y
 
 ## Adivinando la interfaz del usuario ##
 entorno_grafico=$(echo $XDG_CURRENT_DESKTOP)
@@ -110,12 +110,12 @@ os_comprobacion=$(cat /etc/os-release | head -n1 | cut -d '=' -f 2 | tr -d '"' |
 if [ "$os_comprobacion" == "Kali" ]; then
 echo -e "\n\n[+] INSTALANDO HERRAMIENTAS PENTESTING\n"
 sleep 3
-sudo apt install subfinder fuse dirsearch nuclei wfuzz gospider arjun amass assetfinder jadx ffuf -y
+sudo apt install subfinder fuse dirsearch nuclei wfuzz gospider arjun amass assetfinder jadx ffuf apktool -y
 elif [ $os_comprobacion == 'Parrot' ];then
 echo -e "\n\n[+] INSTALANDO HERRAMIENTAS PENTESTING\n"
 sleep 3
-sudo apt install dirsearch fuse nuclei wfuzz gospider arjun assetfinder jadx ffuf -y
-## En el repo de Parrot hay herramientas que si estan en Kali y no en Parrot ##
+sudo apt install dirsearch fuse nuclei wfuzz gospider arjun assetfinder jadx ffuf apktool -y
+## En el repo de Parrot hay herramientas que no estan mientra que en Kali si, esta funcion contiene las herramientas hace falta instalar a mano en Parrot OS ##
 parrot_tools
 else
 sudo apt install wfuzz
@@ -262,6 +262,7 @@ ruta_wordlist3=$HOME/wordlists/payloads/sqli
 ruta_wordlist4=$HOME/wordlists/payloads/lfi
 ruta_wordlist5=$HOME/wordlists/payloads/redirect
 ruta_wordlist6=$HOME/wordlists/file_leaks
+ruta_wordlist_idiomas=$HOME/wordlists/idiomas
 
 mkdir -p $ruta_wordlist1
 mkdir -p $ruta_wordlist2
@@ -269,6 +270,7 @@ mkdir -p $ruta_wordlist3
 mkdir -p $ruta_wordlist4
 mkdir -p $ruta_wordlist5
 mkdir -p $ruta_wordlist6
+mkdir -p $ruta_wordlist_idiomas
 
 
 sudo mv HackerMachine/xss_cheat_sheet/* $ruta_wordlist1
@@ -303,6 +305,9 @@ sudo mv httparchive_subdomains_2024_05_28.txt $ruta_wordlist2
 git clone https://github.com/0xPugal/fuzz4bounty
 sudo mv fuzz4bounty/fuzz4bounty $HOME/wordlists/file_leaks
 sudo rm -rf fuzz4bounty
+git clone 'https://github.com/gurkylee/Wordlist-Collection/'
+sudo mv Wordlist-Collection/languages/* $ruta_wordlist_idiomas
+sudo rm -rf Wordlist-Collection/
 
 ## Configurando Firefox ##
 
@@ -377,7 +382,6 @@ sudo apt install virtualbox -y
 wget "https://dl.genymotion.com/releases/genymotion-3.7.1/genymotion-3.7.1-linux_x64.bin"
 chmod +x genymotion-3.7.1-linux_x64.bin
 sudo ./genymotion-3.7.1-linux_x64.bin
-sudo apt install adb
 echo -e "\n\n\n[+] INSTALANDO SPOTIFY...\n\n"
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install flathub com.spotify.Client
@@ -431,6 +435,7 @@ comprobar_instalacion "qsreplace" "QSREPLACE"
 comprobar_instalacion "airixss" "AIRIXSS"
 comprobar_instalacion "xmind" "XMIND"
 comprobar_instalacion "secretfinder" "SECRETFINDER"
+comprobar_instalacion "apktool" "APKTOOL"
 
 rm genymotion-3.7.1-linux_x64.bin linux_64.tar.gz v2.4.tar.gz xmind.deb
 
