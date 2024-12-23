@@ -228,8 +228,18 @@ go install github.com/ferreiraklet/airixss@latest
 sudo mv go/bin/airixss /usr/bin
 sudo rm -rf go/
 
+echo -e "\n\n[+] FUZZULI\n\n\n"
+sleep 1
+go install -v github.com/musana/fuzzuli@latest
+sudo mv go/bin/fuzzuli /usr/bin
+sudo rm -rf go/
+
+
 echo -e "\n\n[+] SECRETFINDER\n\n\n"
 sleep 1
+git clone https://github.com/m4ll0k/SecretFinder.git secretfinder
+sudo chmod +x secretfinder/SecretFinder.py
+sudo mv secretfinder/SecretFinder.py /usr/bin
 
 #####echo -e "\n\n[+] CORSY\n\n\n"
 
@@ -436,6 +446,7 @@ comprobar_instalacion "airixss" "AIRIXSS"
 comprobar_instalacion "xmind" "XMIND"
 comprobar_instalacion "secretfinder" "SECRETFINDER"
 comprobar_instalacion "apktool" "APKTOOL"
+comprobar_instalacion "fuzzuli" "FUZZULI"
 
 rm genymotion-3.7.1-linux_x64.bin linux_64.tar.gz v2.4.tar.gz xmind.deb
 
