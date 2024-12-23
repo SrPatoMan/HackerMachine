@@ -143,12 +143,10 @@ sudo dpkg -i xmind.deb
 mkdir -p $HOME/.local/xmind
 
 ## Herramientas hacking ##
-echo -e "[+] AQUATONE\n\n\n"
+echo -e "[+] EYEWITNESS\n\n\n"
 sleep 1
-wget "https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_linux_amd64_1.7.0.zip"
-unzip aquatone_linux_amd64_1.7.0.zip
-sudo mv aquatone /usr/bin/
-rm LICENSE.txt README.md aquatone_linux_amd64_1.7.0.zip
+git clone https://github.com/RedSiege/EyeWitness/
+sudo ./EyeWitness/Python/setup/setup.sh
 
 echo -e "\n\n[+] WAYBACKURLS\n\n\n"
 sleep 1
@@ -418,6 +416,7 @@ echo -e "\n[+] $herramienta_mayusculas INSTALADO CON ÉXITO\n"
 fi
 }
 
+comprobar_instalacion "eyewitness" "EYEWITNESS"
 comprobar_instalacion "dirsearch" "DIRSEARCH"
 comprobar_instalacion "wfuzz" "WFUZZ"
 comprobar_instalacion "burpsuite" "BURPSUITE"
